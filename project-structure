@@ -1,0 +1,36 @@
+rxzb/
+├── pages/                    # 页面文件夹
+│   ├── index/               # 首页
+│   ├── category/            # 分类页
+│   ├── detail/              # 详情页
+│   ├── map/                 # 地图页
+│   ├── user/                # 个人中心
+│   └── search/              # 搜索页
+├── components/              # 公共组件
+├── utils/                   # 工具函数
+├── styles/                  # 公共样式
+├── services/               # API 服务
+├── config/                 # 配置文件
+├── static/                 # 静态资源目录
+│   └── images/            
+│       └── tabbar/         # tabbar图标目录
+│           ├── home.png
+│           ├── home-active.png
+│           ├── category.png
+│           ├── category-active.png
+│           ├── map.png
+│           ├── map-active.png
+│           ├── user.png
+│           └── user-active.png
+└── static/
+    └── images/
+        ├── icons/
+        │   ├── search.png      # 搜索图标
+        │   ├── location.png    # 定位图标
+        │   ├── category.png    # 分类图标
+        │   └── empty.png       # 空状态图标
+        └── category/
+            ├── food.png        # 美食图标
+            ├── scenic.png      # 景点图标
+            ├── entertainment.png # 娱乐图标
+            └── hotel.png       # 住宿图标 

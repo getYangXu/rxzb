@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "t-loading": "tdesign-miniprogram/loading/loading",
+    "t-search": "tdesign-miniprogram/search/search",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-grid": "tdesign-miniprogram/grid/grid",
+    "t-grid-item": "tdesign-miniprogram/grid-item/grid-item",
+    "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel",
+    "t-toast": "tdesign-miniprogram/toast/toast",
+    "load-more": "../../components/load-more/index"
+  },
+  "navigationBarTitleText": "蓉享周边"
+}

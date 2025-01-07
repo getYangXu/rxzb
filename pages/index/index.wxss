@@ -1,0 +1,345 @@
+/* pages/index/index.wxss */
+.home-page-header {
+  background-color: #fff;
+  padding: 24rpx 30rpx;
+}
+
+.search {
+  margin-bottom: 16rpx;
+}
+
+.category-nav {
+  background-color: #fff;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.home-page-container {
+  background-color: #f5f5f5;
+}
+
+.home-page-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.recommend-list {
+  padding: 20rpx;
+}
+
+.place-card {
+  margin: 20rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+}
+
+.card-header {
+  position: relative;
+}
+
+.thumb {
+  width: 100%;
+  height: 320rpx;
+  display: block;
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16rpx;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 16rpx;
+}
+
+.place-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rpx;
+}
+
+.category {
+  color: #666;
+  font-size: 24rpx;
+}
+
+.rating {
+  color: #ff5f15;
+  font-size: 24rpx;
+}
+
+.address {
+  color: #999;
+  font-size: 24rpx;
+}
+
+/* 搜索区域样式 */
+.search-container {
+  background: linear-gradient(to right, #FF6B6B, #FF8E8E);
+  padding: 24rpx 30rpx 32rpx;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 16rpx 24rpx;
+}
+
+.search-inner {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.search-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+}
+
+.search-placeholder {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.search-right {
+  display: flex;
+  align-items: center;
+  padding-left: 24rpx;
+  border-left: 1px solid #EEEEEE;
+}
+
+.location-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+}
+
+.location-text {
+  color: #333;
+  font-size: 28rpx;
+}
+
+/* 轮播图样式 */
+.swiper-container {
+  padding: 20rpx;
+}
+
+.custom-swiper {
+  border-radius: 16rpx;
+  overflow: hidden;
+  transform: translateY(-20rpx);
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.1);
+}
+
+/* 分类导航样式 */
+.category-container {
+  padding: 20rpx 30rpx;
+  background: #FFFFFF;
+  margin-bottom: 20rpx;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rpx;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx;
+}
+
+.category-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 12rpx;
+}
+
+.category-name {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 4rpx;
+}
+
+.category-desc {
+  font-size: 22rpx;
+  color: #999;
+}
+
+/* 标题样式 */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  background: #FFFFFF;
+}
+
+.title-left {
+  display: flex;
+  align-items: center;
+}
+
+.title-bar {
+  width: 6rpx;
+  height: 32rpx;
+  background: #FF6B6B;
+  margin-right: 16rpx;
+  border-radius: 3rpx;
+}
+
+.title-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.title-right {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.arrow {
+  margin-left: 8rpx;
+}
+
+/* 标签页样式 */
+.tabs-container {
+  background: #FFFFFF;
+  margin-bottom: 20rpx;
+}
+
+.custom-tabs {
+  padding: 0 20rpx;
+}
+
+.custom-tabs-item {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.custom-tabs-active {
+  color: #FF6B6B !important;
+}
+
+.custom-tabs-track {
+  background: #FF6B6B !important;
+}
+
+/* 推荐列表样式 */
+.recommend-list {
+  padding: 20rpx;
+}
+
+.place-card {
+  margin-bottom: 30rpx;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.08);
+}
+
+.card-header {
+  position: relative;
+}
+
+.thumb {
+  width: 100%;
+  height: 360rpx;
+  display: block;
+}
+
+.card-tags {
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+  display: flex;
+  gap: 8rpx;
+}
+
+.tag {
+  padding: 4rpx 12rpx;
+  background: rgba(255,107,107,0.9);
+  color: #FFFFFF;
+  font-size: 22rpx;
+  border-radius: 6rpx;
+}
+
+.card-content {
+  padding: 20rpx;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.content-header .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.rating-box {
+  display: flex;
+  align-items: baseline;
+}
+
+.rating {
+  font-size: 36rpx;
+  color: #FF6B6B;
+  font-weight: bold;
+}
+
+.rating-desc {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 4rpx;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+.info-icon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 8rpx;
+}
+
+.category {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.address {
+  font-size: 26rpx;
+  color: #999;
+  flex: 1;
+}

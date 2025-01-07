@@ -1,0 +1,117 @@
+<!--pages/index/index.wxml-->
+<view style="text-align: center; color: #b9b9b9" wx:if="{{pageLoading}}">
+  <t-loading theme="circular" size="40rpx" text="加载中..." inherit-color />
+</view>
+
+<!-- 顶部搜索区域 -->
+<view class="search-container">
+  <view class="search-box" bind:tap="navToSearchPage">
+    <view class="search-inner">
+      <image class="search-icon" src="../../static/images/icons/search.png" />
+      <text class="search-placeholder">搜索美食、景点、酒店...</text>
+    </view>
+    <view class="search-right">
+      <image class="location-icon" src="../../static/images/icons/location.png" />
+      <text class="location-text">成都市</text>
+    </view>
+  </view>
+</view>
+
+<!-- 轮播图区域 -->
+<view class="swiper-container">
+  <t-swiper
+    wx:if="{{imgSrcs.length > 0}}"
+    current="{{current}}"
+    autoplay="{{autoplay}}"
+    duration="{{duration}}"
+    interval="{{interval}}"
+    navigation="{{navigation}}"
+    imageProps="{{swiperImageProps}}"
+    list="{{imgSrcs}}"
+    bind:click="navToActivityDetail"
+    class="custom-swiper"
+  />
+</view>
+
+<!-- 主分类导航 -->
+<view class="category-container">
+  <view class="category-grid">
+    <view class="category-item" wx:for="{{categories}}" wx:key="type" bind:tap="navToCategory" data-type="{{item.type}}">
+      <image class="category-icon" src="{{item.icon}}" mode="aspectFit"/>
+      <text class="category-name">{{item.name}}</text>
+      <text class="category-desc">{{item.desc}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 热门推荐标题 -->
+<view class="section-title">
+  <view class="title-left">
+    <view class="title-bar"></view>
+    <text class="title-text">热门推荐</text>
+  </view>
+  <view class="title-right" bind:tap="navToMore">
+    <text>更多</text>
+    <text class="arrow">></text>
+  </view>
+</view>
+
+<!-- 内容分类标签页 -->
+<view class="tabs-container">
+  <t-tabs
+    t-class="custom-tabs"
+    t-class-active="custom-tabs-active"
+    t-class-item="custom-tabs-item"
+    t-class-track="custom-tabs-track"
+    defaultValue="{{0}}"
+    bind:change="tabChangeHandle"
+  >
+    <t-tab-panel
+      wx:for="{{tabList}}"
+      wx:key="key"
+      label="{{item.text}}"
+      value="{{item.key}}"
+    />
+  </t-tabs>
+</view>
+
+<!-- 推荐列表 -->
+<view class="recommend-list">
+  <block wx:for="{{placeList}}" wx:key="id">
+    <view class="place-card" bind:tap="navToDetail" data-id="{{item.id}}">
+      <view class="card-header">
+        <image class="thumb" src="{{item.image}}" mode="aspectFill"/>
+        <view class="card-tags" wx:if="{{item.tags.length}}">
+          <text class="tag" wx:for="{{item.tags}}" wx:key="*this">{{item}}</text>
+        </view>
+      </view>
+      <view class="card-content">
+        <view class="content-header">
+          <text class="title">{{item.name}}</text>
+          <view class="rating-box">
+            <text class="rating">{{item.rating}}</text>
+            <text class="rating-desc">分</text>
+          </view>
+        </view>
+        <view class="content-info">
+          <view class="info-item">
+            <image class="info-icon" src="../../static/images/icons/category.png"/>
+            <text class="category">{{item.category}}</text>
+          </view>
+          <view class="info-item">
+            <image class="info-icon" src="../../static/images/icons/location.png"/>
+            <text class="address">{{item.address}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- 加载更多 -->
+<load-more 
+  list-is-empty="{{!placeList.length}}" 
+  status="{{loadStatus}}" 
+  bind:retry="onReTry" 
+/>
+<t-toast id="t-toast" />
