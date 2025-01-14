@@ -1,6 +1,6 @@
 /* pages/index/index.wxss */
 .home-page-header {
-  background-color: #fff;
+  background-color: #f5f5f5;
   padding: 24rpx 30rpx;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .category-nav {
-  background-color: #fff;
+  background-color:#f5f5f5;
   padding: 20rpx 0;
   margin-bottom: 20rpx;
 }
@@ -103,7 +103,7 @@
 
 /* 搜索区域样式 */
 .search-container {
-  background: linear-gradient(to right, #FF6B6B, #FF8E8E);
+  background: linear-gradient(to right,#EEEEEE, #fff);
   padding: 24rpx 30rpx 32rpx;
 }
 

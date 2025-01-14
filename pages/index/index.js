@@ -9,13 +9,13 @@ Page({
     current: 0,
     autoplay: true,
     duration: 500,
-    interval: 5000,
+    interval: 3000,
     navigation: { type: 'dots' },
     swiperImageProps: { mode: 'scaleToFill' },
     swiperList: [
-      'https://tdesign.gtimg.com/mobile/demos/swiper1.png',
-       'https://tdesign.gtimg.com/mobile/demos/swiper1.png',
-        'https://tdesign.gtimg.com/mobile/demos/swiper1.png'
+      'https://n.sinaimg.cn/spider20240229/532/w1280h852/20240229/1cba-38385cdbdff3bb7a8b8de71819abcd92.jpg',
+      'https://i0.hdslb.com/bfs/archive/72c01cb7f62c5e897926d020c04e4654bf7e6947.jpg',
+      'https://qcloud.dpfile.com/pc/wT8Gqshm9A8cVcKLi2cM4u-F7KDIgUldd0LCvR7N1xeXTyzltWS0cMQz64oljHcX.jpg'
     ], // 轮播图数据
     tabList: [
       {
@@ -53,26 +53,26 @@ Page({
       {
         type: 'food',
         name: '美食',
-        icon: '/static/images/category/food.png',
-        desc: '特色小吃'
+        icon: '/static/images/category/火锅.png',
+        // desc: '特色小吃'
       },
       {
         type: 'scenic',
         name: '景点',
-        icon: '/static/images/category/food.png',
-        desc: '网红打卡'
+        icon: '/static/images/category/锦鲤.png',
+        // desc: '网红打卡'
       },
       {
         type: 'entertainment',
         name: '娱乐',
-        icon: '/static/images/category/entertainment.png',
-        desc: '休闲放松'
+        icon: '/static/images/category/大鼓.png',
+        // desc: '休闲放松'
       },
       {
         type: 'hotel',
         name: '住宿',
-        icon: '/static/images/category/hotel.png',
-        desc: '品质住宿'
+        icon: '/static/images/category/钱袋.png',
+        // desc: '品质住宿'
       }
     ]
   },
