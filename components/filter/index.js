@@ -1,84 +1,23 @@
 Component({
-  externalClasses: ['wr-class'],
-
-  options: {
-    multipleSlots: true,
-  },
-
   properties: {
-    overall: {
-      type: Number,
-      value: 1,
-      observer(overall) {
-        this.setData({
-          overall,
-        });
-      },
-    },
-    layout: {
-      type: Number,
-      value: 1,
-      observer(layout) {
-        this.setData({
-          layout,
-        });
-      },
-    },
-    sorts: {
-      type: String,
-      value: '',
-      observer(sorts) {
-        this.setData({
-          sorts,
-        });
-      },
-    },
-    color: {
-      type: String,
-      value: '#FA550F',
-    },
+    show: {
+      type: Boolean,
+      value: false
+    }
   },
-
   data: {
-    layout: 1,
-    overall: 1,
-    sorts: '',
+    filterItems: [
+      { text: '全部', value: 'all' },
+      { text: '美食', value: 'food' },
+      { text: '景点', value: 'scenic' },
+      { text: '娱乐', value: 'entertainment' },
+      { text: '住宿', value: 'hotel' }
+    ]
   },
-
   methods: {
-    onChangeShowAction() {
-      const { layout } = this.data;
-      const nextLayout = layout === 1 ? 0 : 1;
-      this.triggerEvent('change', { ...this.properties, layout: nextLayout });
-    },
-
-    handlePriseSort() {
-      const { sorts } = this.data;
-      this.triggerEvent('change', {
-        ...this.properties,
-        overall: 0,
-        sorts: sorts === 'desc' ? 'asc' : 'desc',
-      });
-    },
-
-    open() {
-      this.triggerEvent('showFilterPopup', {
-        show: true,
-      });
-    },
-
-    onOverallAction() {
-      const { overall } = this.data;
-      const nextOverall = overall === 1 ? 0 : 1;
-      const nextData = {
-        sorts: '',
-        prices: [],
-      };
-      this.triggerEvent('change', {
-        ...this.properties,
-        ...nextData,
-        overall: nextOverall,
-      });
-    },
-  },
+    onFilterItemClick(e) {
+      const { value } = e.currentTarget.dataset;
+      this.triggerEvent('filter', { value });
+    }
+  }
 });

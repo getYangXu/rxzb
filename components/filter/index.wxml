@@ -35,3 +35,17 @@
 <!-- 筛选弹框 -->
 <slot name="filterPopup" />
 
+<view class="filter-container">
+  <view class="filter-list">
+    <view 
+      wx:for="{{filterItems}}" 
+      wx:key="value"
+      class="filter-item {{selected === item.value ? 'active' : ''}}"
+      data-value="{{item.value}}"
+      bind:tap="onFilterItemClick"
+    >
+      {{item.text}}
+    </view>
+  </view>
+</view>
+

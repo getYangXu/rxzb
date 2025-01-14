@@ -7,29 +7,34 @@
 <view class="search-container">
   <view class="search-box" bind:tap="navToSearchPage">
     <view class="search-inner">
-      <image class="search-icon" src="../../static/images/icons/search.png" />
+      <view class="search-icon">
+        <text class="iconfont icon-search"></text>
+      </view>
       <text class="search-placeholder">搜索美食、景点、酒店...</text>
     </view>
     <view class="search-right">
-      <image class="location-icon" src="../../static/images/icons/location.png" />
+      <view class="location-icon">
+        <text class="iconfont icon-location"></text>
+      </view>
       <text class="location-text">成都市</text>
     </view>
   </view>
 </view>
 
 <!-- 轮播图区域 -->
-<view class="swiper-container">
+<view class="card-theme">
   <t-swiper
-    wx:if="{{imgSrcs.length > 0}}"
-    current="{{current}}"
+   current="{{current}}"
     autoplay="{{autoplay}}"
     duration="{{duration}}"
     interval="{{interval}}"
-    navigation="{{navigation}}"
-    imageProps="{{swiperImageProps}}"
-    list="{{imgSrcs}}"
-    bind:click="navToActivityDetail"
-    class="custom-swiper"
+    bindchange="onChange"
+    navigation="{{ { type: 'dots' } }}"
+    list="{{swiperList}}"
+    image-props="{{ { shape: 'round' } }}"
+    previousMargin="34px"
+    nextMargin="34px"
+    t-class-nav="card-theme-nav"
   />
 </view>
 
@@ -95,11 +100,15 @@
         </view>
         <view class="content-info">
           <view class="info-item">
-            <image class="info-icon" src="../../static/images/icons/category.png"/>
+            <view class="info-icon">
+              <text class="iconfont icon-category"></text>
+            </view>
             <text class="category">{{item.category}}</text>
           </view>
           <view class="info-item">
-            <image class="info-icon" src="../../static/images/icons/location.png"/>
+            <view class="info-icon">
+              <text class="iconfont icon-location"></text>
+            </view>
             <text class="address">{{item.address}}</text>
           </view>
         </view>

@@ -18,6 +18,23 @@
   background-color: #f5f5f5;
 }
 
+.card-theme {
+  --td-swiper-radius: 0;
+  --td-swiper-item-padding: 0 12rpx;
+  --td-swiper-nav-dot-color: var(--td-bg-color-component, #e7e7e7);
+  --td-swiper-nav-dot-active-color: var(--td-brand-color, #0052d9);
+
+  padding-bottom: 18px;
+}
+
+.card-theme .card-theme-nav {
+  bottom: -18px;
+}
+
+.scale-candidate {
+  height: 126px !important;
+}
+
 .home-page-tabs {
   position: sticky;
   top: 0;
@@ -137,13 +154,38 @@
 /* 轮播图样式 */
 .swiper-container {
   padding: 20rpx;
+  background: #fff;
 }
 
 .custom-swiper {
+  height: 360rpx;
   border-radius: 16rpx;
   overflow: hidden;
-  transform: translateY(-20rpx);
   box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.1);
+}
+
+.swiper-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+
+.swiper-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16rpx 24rpx;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: bold;
 }
 
 /* 分类导航样式 */

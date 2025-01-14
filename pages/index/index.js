@@ -12,7 +12,11 @@ Page({
     interval: 5000,
     navigation: { type: 'dots' },
     swiperImageProps: { mode: 'scaleToFill' },
-    imgSrcs: [], // 轮播图数据
+    swiperList: [
+      'https://tdesign.gtimg.com/mobile/demos/swiper1.png',
+       'https://tdesign.gtimg.com/mobile/demos/swiper1.png',
+        'https://tdesign.gtimg.com/mobile/demos/swiper1.png'
+    ], // 轮播图数据
     tabList: [
       {
         text: '推荐',
@@ -49,25 +53,25 @@ Page({
       {
         type: 'food',
         name: '美食',
-        icon: '../../static/images/category/food.png',
+        icon: '/static/images/category/food.png',
         desc: '特色小吃'
       },
       {
         type: 'scenic',
         name: '景点',
-        icon: '../../static/images/category/scenic.png',
+        icon: '/static/images/category/food.png',
         desc: '网红打卡'
       },
       {
         type: 'entertainment',
         name: '娱乐',
-        icon: '../../static/images/category/entertainment.png',
+        icon: '/static/images/category/entertainment.png',
         desc: '休闲放松'
       },
       {
         type: 'hotel',
         name: '住宿',
-        icon: '../../static/images/category/hotel.png',
+        icon: '/static/images/category/hotel.png',
         desc: '品质住宿'
       }
     ]
@@ -85,13 +89,13 @@ Page({
     this.loadPlaceList();
   },
 
-  // 加载轮播图数据
-  loadSwiper() {
-    const { getMockSwiper } = require('../../services/mock/swiper.js');
-    this.setData({
-      imgSrcs: getMockSwiper()
-    });
-  },
+  // // 加载轮播图数据
+  // loadSwiper() {
+  //   const { getMockSwiper } = require('../../services/mock/swiper.js');
+  //   this.setData({
+  //     imgSrcs: getMockSwiper(),
+  //   });
+  // },
 
   // 加载地点列表
   loadPlaceList() {
@@ -127,5 +131,13 @@ Page({
   // 重试加载
   onReTry() {
     this.loadPlaceList();
+  },
+
+  navToActivityDetail(e) {
+    const { index } = e.detail;
+    const item = this.data.imgSrcs[index];
+    wx.navigateTo({
+      url: item.url
+    });
   }
 })
