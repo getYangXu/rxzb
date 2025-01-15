@@ -91,25 +91,25 @@
         </view>
       </view>
       <view class="card-content">
-        <view class="content-header">
-          <text class="title">{{item.name}}</text>
+        <view class="content-wrapper">
+          <view class="place-name">{{item.name}}</view>
           <view class="rating-box">
             <text class="rating">{{item.rating}}</text>
             <text class="rating-desc">分</text>
           </view>
-        </view>
-        <view class="content-info">
-          <view class="info-item">
-            <view class="info-icon">
-              <text class="iconfont icon-category"></text>
+          <view class="info-list">
+            <view class="info-item">
+              <!--<view class="icon-wrap">
+                <text class="iconfont icon-category"></text>
+              </view>-->
+              <text class="info-text">{{item.category}}</text>
             </view>
-            <text class="category">{{item.category}}</text>
-          </view>
-          <view class="info-item">
-            <view class="info-icon">
-              <text class="iconfont icon-location"></text>
+            <view class="info-item">
+             <!-- <view class="icon-wrap">
+                <text class="iconfont icon-location"></text>
+              </view>-->
+              <text class="info-text">{{item.address}}</text>
             </view>
-            <text class="address">{{item.address}}</text>
           </view>
         </view>
       </view>

@@ -13,9 +13,9 @@ Page({
     navigation: { type: 'dots' },
     swiperImageProps: { mode: 'scaleToFill' },
     swiperList: [
-      'https://n.sinaimg.cn/spider20240229/532/w1280h852/20240229/1cba-38385cdbdff3bb7a8b8de71819abcd92.jpg',
-      'https://i0.hdslb.com/bfs/archive/72c01cb7f62c5e897926d020c04e4654bf7e6947.jpg',
-      'https://qcloud.dpfile.com/pc/wT8Gqshm9A8cVcKLi2cM4u-F7KDIgUldd0LCvR7N1xeXTyzltWS0cMQz64oljHcX.jpg'
+      'https://gd-hbimg.huaban.com/d988f3e9e3e81912f5750cc442c0e3f40a9c36f02cb95-uxugPo_fw658webp',
+      'https://gd-hbimg.huaban.com/0bc1cb634068d6baa09df9fde79ee03d1b5ace308634b-MEifHF_fw658webp',
+      'https://gd-hbimg.huaban.com/7697a6d5b5fd8a516eb99715d2a9f1c9693b6284e916-C6mg7m_fw658webp'
     ], // 轮播图数据
     tabList: [
       {
@@ -85,7 +85,7 @@ Page({
   },
 
   init() {
-    this.loadSwiper();
+    // this.loadSwiper();
     this.loadPlaceList();
   },
 
@@ -99,6 +99,7 @@ Page({
 
   // 加载地点列表
   loadPlaceList() {
+    // debugger
     const { getMockPlaces } = require('../../services/mock/places.js');
     this.setData({
       placeList: getMockPlaces(),
